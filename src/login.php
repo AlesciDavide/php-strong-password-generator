@@ -2,13 +2,7 @@
 require_once __DIR__ . '/utilities/users.php';
 
 session_start();
-if(isset($_GET["username"]) && isset($_GET["password"])){
-    $_SESSION["username"] = ($_GET["username"]);
-    $_SESSION["password"] = ($_GET["password"]);
-}else{
-    $_SESSION["username"] = ($_GET["username"])?? 'logout';
-    $_SESSION["password"] = ($_GET["password"])?? 'logout';
-}
+
 
 
 var_dump($_SESSION);
