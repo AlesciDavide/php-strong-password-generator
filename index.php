@@ -5,6 +5,8 @@ require_once __DIR__ . '/src/utilities/users.php';
 require_once __DIR__ . '/src/utilities/functions.php';
 
 
+
+
 checkUser($_GET["username"]?? 'logout', $_GET["password"]?? 'logout');
 
 $isOn = false;
@@ -38,9 +40,13 @@ $isOn = false;
             <?php break; ?>
         <?php }elseif($_SESSION["username"] == "logout" && $_SESSION["password"] == "logout" ){ ?>
             <?php $isOn = false; ?>
+
         <?php break; ?>
         <?php }else{ ?>
+            <?php header('location: ./src/login.php');?>
             <?php $isOn = false; ?>
+        <?php break; ?>
+
     <?php } ?>
     <?php } ?>
             <section>
