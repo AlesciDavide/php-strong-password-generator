@@ -25,6 +25,7 @@ $isOn = false;
 <body>
     <ul class="myHeader">
         <li><a href="./index.php">Home</a></li>
+        
         <li><a href="./src/login.php">Login</a></li>
         <li><a href="./src/logout.php">Logout</a></li>
     </ul>

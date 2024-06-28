@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/utilities/users.php';
 
+session_start();
 
 
 
@@ -20,7 +21,7 @@ require_once __DIR__ . '/utilities/users.php';
 <body>
 <ul class="myHeader">
         <li><a href="../index.php">Home</a></li>
-        <li><a href="./src/login.php">Login</a></li>
+        
         <li><a href="../src/logout.php">Logout</a></li>
     </ul>
     <section class="myForm">
