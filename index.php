@@ -9,7 +9,7 @@ checkUser($_GET["username"]?? 'logout', $_GET["password"]?? 'logout');
 
 
 
-var_dump($_SESSION);
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +31,8 @@ var_dump($_SESSION);
     <?php  foreach ($users as $user ) {?>
         <?php  if ($_SESSION["username"] == $user["username"] && $_SESSION["password"] == $user["password"]) {?>
             <h2>Benveuto: <?php echo ($_SESSION["username"]?? '') ?></h2>
+            <h3>questi sono i tuoi contenuti dopo aver effettuato l'accesso:</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi repudiandae qui excepturi, dignissimos beatae tempore totam vitae atque, dolorum neque fugit velit cumque, labore autem at saepe soluta voluptates quaerat!</p>
             <?php break; ?>
         <?php }elseif($_SESSION["username"] == "logout" && $_SESSION["password"] == "logout" ){ ?>
         <?php break; ?>
