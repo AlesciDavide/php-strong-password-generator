@@ -1,15 +1,11 @@
 <?php 
-
-require_once __DIR__ . '/src/utilities/users.php';
 session_start();
 
-if(isset($_GET["username"]) && isset($_GET["password"])){
-    $_SESSION["username"] = ($_GET["username"]);
-    $_SESSION["password"] = ($_GET["password"]);
-}else{
-    $_SESSION["username"] = ($_GET["username"])?? 'logout';
-    $_SESSION["password"] = ($_GET["password"])?? 'logout';
-}
+require_once __DIR__ . '/src/utilities/users.php';
+require_once __DIR__ . '/src/utilities/functions.php';
+
+
+checkUser($_GET["username"]?? 'logout', $_GET["password"]?? 'logout');
 
 
 
