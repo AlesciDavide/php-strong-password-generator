@@ -2,9 +2,14 @@
 require_once __DIR__ . '/utilities/users.php';
 
 session_start();
+if(isset($_GET["username"]) && isset($_GET["password"])){
+    $_SESSION["username"] = ($_GET["username"]);
+    $_SESSION["password"] = ($_GET["password"]);
+}else{
+    $_SESSION["username"] = ($_GET["username"])?? 'logout';
+    $_SESSION["password"] = ($_GET["password"])?? 'logout';
+}
 
-$_SESSION["username"] = ($_GET["username"]);
-$_SESSION["password"] = ($_GET["password"]);
 
 var_dump($_SESSION);
 
@@ -24,7 +29,7 @@ var_dump($_SESSION);
         <input type="text" name="username" id="username" placeholder="inserisci l'username">
         <label for="password"></label>
         <input type="text" name="password" id="password" placeholder="inserisci la Password">
-        <button>send</button>
+        <button type="submit">send</button>
     </form>
 </body>
 </html>
