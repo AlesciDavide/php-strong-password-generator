@@ -1,8 +1,7 @@
 <?php
-require_once __DIR__ . '/utilities/users.php';
-
 session_start();
-
+require_once __DIR__ . '/utilities/functions.php';
+require_once __DIR__ . '/utilities/users.php';
 
 
 

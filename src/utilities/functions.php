@@ -1,13 +1,19 @@
 <?php 
-require_once __DIR__ . '/users.php';
 
 
 
-function checkUser($username, $password){
 
-    if(isset($username) && isset($password)){
-        $_SESSION["username"] = ($username);
-        $_SESSION["password"] = ($password);
-    }
-}
+
+function checkUser($username, $password, $users){
+    
+        
+        foreach ($users as $user) {
+            if ($username == $user["username"] && $password == $user["password"]) {
+                    $_SESSION["username"] = ($username);
+                    break;
+            }
+        }
+    
+} 
+
 ?>
